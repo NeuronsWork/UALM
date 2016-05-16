@@ -271,7 +271,7 @@ footer {
         font-family: "futura_extend", sans-serif;
         font-size: 54px;
         font-weight: 300; }
-      #slider .ms-partialview-template .ms-slide .ms-info p {
+      #slider .ms-partialview-template .ms-slide .ms-info p, #slider .ms-partialview-template .ms-slide .ms-info .section article li, .section article #slider .ms-partialview-template .ms-slide .ms-info li {
         margin: 6px;
         text-align: justify;
         font-family: "Open Sans", sans-serif;
@@ -482,7 +482,7 @@ footer {
   left: 0 !important;
   text-shadow: 0 0 0 transparent !important;
   padding-bottom: 50px !important; }
-  .carousel-caption p {
+  .carousel-caption p, .carousel-caption .section article li, .section article .carousel-caption li {
     color: #333;
     margin: 0 0 50px;
     line-height: 50px;
@@ -646,6 +646,33 @@ aside.sidebar_qs {
           border-radius: 40px; }
   aside.sidebar_qs .carousel {
     padding: 0; }
+    aside.sidebar_qs .carousel header {
+      height: initial;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0 !important;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 300; }
+      aside.sidebar_qs .carousel header:after {
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(85, 114, 133, 0);
+        border-top-color: rgba(0, 0, 0, 0.5);
+        border-width: 8px;
+        margin-left: -8px; }
     aside.sidebar_qs .carousel .item img {
       width: 100%; }
     aside.sidebar_qs .carousel .item .tenor {
@@ -684,7 +711,7 @@ aside.sidebar_qs {
         background: rgba(0, 0, 0, 0.15);
         letter-spacing: 1px;
         padding: 5px;
-        display: block;
+        text-transform: uppercase;
         -webkit-border-radius: 40px;
         -moz-border-radius: 40px;
         -ms-border-radius: 40px;
@@ -700,6 +727,34 @@ aside.sidebar_qs {
           -moz-border-radius: 40px;
           -ms-border-radius: 40px;
           border-radius: 40px; }
+    aside.sidebar_qs .carousel footer {
+      border-bottom: 1px solid #ccc;
+      border-right: 1px solid #ccc;
+      border-left: 1px solid #ccc;
+      width: 100%;
+      position: relative;
+      background: #fff;
+      float: left; }
+      aside.sidebar_qs .carousel footer .link {
+        color: #999;
+        display: block;
+        width: calc(100% - 114px);
+        letter-spacing: 0.5px;
+        float: left;
+        text-align: center;
+        line-height: 46px;
+        font-family: "futura_normal", sans-serif;
+        font-size: 13px;
+        font-weight: 700; }
+      aside.sidebar_qs .carousel footer a[data-slide="prev"],
+      aside.sidebar_qs .carousel footer a[data-slide="next"] {
+        padding: 15px 20px;
+        display: block;
+        position: relative; }
+      aside.sidebar_qs .carousel footer a[data-slide="prev"] {
+        border-right: 1px solid #ccc; }
+      aside.sidebar_qs .carousel footer a[data-slide="next"] {
+        border-left: 1px solid #ccc; }
 
 /** BREADCRUMB */
 .breadcrumb {
@@ -747,7 +802,7 @@ aside.sidebar_qs {
   font-family: "Open Sans", sans-serif;
   font-size: 22px;
   font-weight: 500; }
-.section article p {
+.section article p, .section article li {
   color: #333333;
   text-align: justify;
   line-height: 22px;
@@ -755,6 +810,26 @@ aside.sidebar_qs {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 300; }
+.section article li {
+  margin-bottom: 10px;
+  background: url("../../assets/img/check_list.svg") left center no-repeat;
+  background-size: 15px;
+  padding-left: 20px; }
+.section article .dr {
+  margin-bottom: 30px; }
+  .section article .dr h3 {
+    text-align: center;
+    color: #666;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 600; }
+  .section article .dr h4 {
+    color: #249119;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500; }
 
 /**
 ****** FAQ ******
@@ -811,7 +886,7 @@ section {
     background-image: url("../../assets/img/icon-plus.svg"); }
 #accordion .panel-body {
   border: 0px; }
-  #accordion .panel-body p {
+  #accordion .panel-body p, #accordion .panel-body .section article li, .section article #accordion .panel-body li {
     text-align: justify;
     line-height: 22px;
     font-family: "Open Sans", sans-serif;
