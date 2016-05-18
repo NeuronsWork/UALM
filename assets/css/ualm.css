@@ -1056,8 +1056,59 @@ aside.sidebar_qs {
         font-weight: 500; }
         .section article .carrito footer .others p span, .section article .carrito footer .others li span {
           color: #249119; }
-      .section article .carrito footer .others form input {
-        height: 45px; }
+      .section article .carrito footer .others form {
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+        padding-bottom: 30px; }
+        .section article .carrito footer .others form div:first-child {
+          padding-left: 0px; }
+        .section article .carrito footer .others form .inputs > div {
+          padding: 0 15px 0 0; }
+        .section article .carrito footer .others form input {
+          height: 45px; }
+        .section article .carrito footer .others form input[type=radio]:not(old) {
+          width: 10px;
+          height: 28px;
+          margin: 0;
+          padding: 0;
+          font-size: 1em;
+          opacity: 0; }
+        .section article .carrito footer .others form input[type=radio]:not(old) + label {
+          display: inline-block;
+          margin-left: -2em;
+          line-height: 13px;
+          color: #666;
+          font-family: "Open Sans", sans-serif;
+          font-size: 13px;
+          font-weight: 500; }
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span {
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          margin: 12px 5px 0px 10px;
+          border: 1px solid silver;
+          background: #fff;
+          vertical-align: bottom;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px; }
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span {
+          background: #fff; }
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span > span,
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span {
+          display: block;
+          width: 7px;
+          height: 7px;
+          margin: 2px;
+          border-radius: 50px;
+          background: #249119;
+          -webkit-border-radius: 50px;
+          -moz-border-radius: 50px;
+          -ms-border-radius: 50px;
+          border-radius: 50px; }
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span {
+          background: #ccc; }
 
 /**
 ****** FAQ ******
@@ -1148,6 +1199,15 @@ section {
     font-family: "Open Sans", sans-serif;
     font-size: 17px;
     font-weight: 300; }
+  .modal-content a {
+    color: #249119;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 700; }
+    .modal-content a img {
+      width: 32px;
+      display: inline-block; }
   .modal-content .btn {
     color: #999;
     width: 190px;
