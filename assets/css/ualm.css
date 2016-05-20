@@ -19,7 +19,10 @@ body {
 .pagina-interna {
   background: #eaeaea; }
   .pagina-interna main {
-    margin-top: -50px; }
+    margin-top: -50px;
+    position: relative;
+    width: 100%;
+    float: left; }
 
 .img-center {
   margin: 0 auto; }
@@ -1027,7 +1030,7 @@ aside.sidebar_qs {
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
       border-radius: 4px; }
-    .section article .carrito footer .others {
+    .section article .carrito footer .others, .section article .carrito footer .contacto {
       border-top: 1px solid #ccc;
       padding: 50px 0;
       text-transform: initial;
@@ -1036,7 +1039,7 @@ aside.sidebar_qs {
       font-family: "Open Sans", sans-serif;
       font-size: 15px;
       font-weight: 600; }
-      .section article .carrito footer .others .btn {
+      .section article .carrito footer .others .btn, .section article .carrito footer .contacto .btn {
         color: #fff;
         background: #249119;
         text-transform: uppercase;
@@ -1045,35 +1048,35 @@ aside.sidebar_qs {
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         font-weight: 600; }
-      .section article .carrito footer .others .return {
+      .section article .carrito footer .others .return, .section article .carrito footer .contacto .return {
         background: #bebebe; }
-      .section article .carrito footer .others p, .section article .carrito footer .others li {
+      .section article .carrito footer .others p, .section article .carrito footer .others li, .section article .carrito footer .contacto p, .section article .carrito footer .contacto li {
         color: #666;
         padding: 50px 0 0;
         text-transform: initial;
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         font-weight: 500; }
-        .section article .carrito footer .others p span, .section article .carrito footer .others li span {
+        .section article .carrito footer .others p span, .section article .carrito footer .others li span, .section article .carrito footer .contacto p span, .section article .carrito footer .contacto li span {
           color: #249119; }
-      .section article .carrito footer .others form {
+      .section article .carrito footer .others form, .section article .carrito footer .contacto form {
         border-bottom: 1px solid #ccc;
         margin-bottom: 30px;
         padding-bottom: 30px; }
-        .section article .carrito footer .others form div:first-child {
+        .section article .carrito footer .others form div:first-child, .section article .carrito footer .contacto form div:first-child {
           padding-left: 0px; }
-        .section article .carrito footer .others form .inputs > div {
+        .section article .carrito footer .others form .inputs > div, .section article .carrito footer .contacto form .inputs > div {
           padding: 0 15px 0 0; }
-        .section article .carrito footer .others form input {
+        .section article .carrito footer .others form input, .section article .carrito footer .contacto form input {
           height: 45px; }
-        .section article .carrito footer .others form input[type=radio]:not(old) {
+        .section article .carrito footer .others form input[type=radio]:not(old), .section article .carrito footer .contacto form input[type=radio]:not(old) {
           width: 10px;
           height: 28px;
           margin: 0;
           padding: 0;
           font-size: 1em;
           opacity: 0; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label, .section article .carrito footer .contacto form input[type=radio]:not(old) + label {
           display: inline-block;
           margin-left: -2em;
           line-height: 13px;
@@ -1081,7 +1084,7 @@ aside.sidebar_qs {
           font-family: "Open Sans", sans-serif;
           font-size: 13px;
           font-weight: 500; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span {
           display: inline-block;
           width: 13px;
           height: 13px;
@@ -1093,10 +1096,11 @@ aside.sidebar_qs {
           -moz-border-radius: 50px;
           -ms-border-radius: 50px;
           border-radius: 50px; }
-        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span {
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span {
           background: #fff; }
         .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span > span,
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span {
           display: block;
           width: 7px;
           height: 7px;
@@ -1107,8 +1111,50 @@ aside.sidebar_qs {
           -moz-border-radius: 50px;
           -ms-border-radius: 50px;
           border-radius: 50px; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span {
           background: #ccc; }
+    .section article .carrito footer .contacto {
+      padding: 0;
+      border-top: 0; }
+      .section article .carrito footer .contacto h2 {
+        margin: 0 0 10px 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 700; }
+      .section article .carrito footer .contacto h3 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 600; }
+      .section article .carrito footer .contacto p, .section article .carrito footer .contacto li {
+        padding: 0; }
+      .section article .carrito footer .contacto form {
+        border-bottom: 0; }
+        .section article .carrito footer .contacto form div {
+          padding: 0; }
+        .section article .carrito footer .contacto form .inputs {
+          float: left;
+          width: 100%;
+          position: relative;
+          margin-bottom: 30px; }
+        .section article .carrito footer .contacto form .send {
+          padding: 12px 80px;
+          background: #666; }
+      .section article .carrito footer .contacto address p, .section article .carrito footer .contacto address li {
+        line-height: 22px;
+        margin: 0;
+        padding: 10px 0;
+        letter-spacing: 1px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 300; }
+      .section article .carrito footer .contacto address img {
+        width: 20px;
+        float: left;
+        border: 0;
+        margin-right: 10px; }
+      .section article .carrito footer .contacto address p:nth-child(2) img, .section article .carrito footer .contacto address li:nth-child(2) img {
+        width: 16px;
+        margin-top: 4px; }
 
 /**
 ****** GOOGLE MAP ******
@@ -1186,6 +1232,14 @@ section {
 /**
 ****** MODAL ******
 */
+.modal {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
 .modal-content {
   border: 6px solid #249119;
   padding: 100px 80px;
