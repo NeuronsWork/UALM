@@ -10,3 +10,5 @@ $('#Modal').on('show.bs.modal', function (event) {
 });
 
 $('#gracias').on('show.bs.modal', function (event) {});
+
+$('.dropdown-menu').find('form').click(function(e){ e.stopPropagation(); });

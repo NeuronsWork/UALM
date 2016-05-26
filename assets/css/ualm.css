@@ -1,3 +1,8 @@
+/**
+ * ************************************
+ * FRONT-END
+ * ************************************
+ */
 /** FONTS EXTERNO */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800,300);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,300italic,200italic,400italic,600,600italic,700,700italic,900,900italic);
@@ -13,6 +18,12 @@
   src: url("../../assets/fonts/FUTURAOBLIQUE.woff2") format("woff2"), url("../../assets/fonts/FUTURAOBLIQUE.woff") format("woff"), url("../../assets/fonts/FUTURAOBLIQUE.ttf") format("truetype"); }
 /** MIXINS */
 /** GLOBALES */
+html, body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  visibility: none !important; }
+
 body {
   overflow-x: hidden; }
 
@@ -36,8 +47,8 @@ form {
   padding: 0;
   width: 100%; }
 
-a, input, button {
-  outline: 0px; }
+*:focus {
+  outline: none; }
 
 /** TENOR PAGINAS INTERNAS */
 #tenor-page {
@@ -1284,6 +1295,142 @@ section {
     font-family: "Open Sans", sans-serif;
     font-size: 13px;
     font-weight: 600; }
+
+/**
+ * ************************************
+ * BACK-END
+ * ************************************
+ */
+#backend {
+  background: #ececec;
+  /**
+   * LOGIN
+   */
+  /**
+   * HEADER
+   */
+  /**
+   * MAIN
+   */ }
+  #backend .bg {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    float: left;
+    background: url(../../assets/img/bg-backend.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
+  #backend .login header {
+    padding: 30px 0 20px !important; }
+  #backend .login main {
+    padding: 50px 100px;
+    background: #e9e9e9;
+    /* basics */ }
+    #backend .login main h2, #backend .login main h3 {
+      color: #333;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 36px;
+      font-weight: 900; }
+    #backend .login main h3 {
+      margin: 0 0 20px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 15px;
+      font-weight: 700; }
+    #backend .login main .form-group {
+      margin: 5px 0 0; }
+    #backend .login main .form-control {
+      color: #959595;
+      letter-spacing: 0.5px;
+      padding: 12px;
+      height: initial;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      -ms-border-radius: 3px;
+      border-radius: 3px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 400; }
+    #backend .login main .form-control:required {
+      border: 1px solid #ccc; }
+    #backend .login main .form-control:valid {
+      border: 1px solid #ccc; }
+    #backend .login main .form-control:invalid {
+      background: #ffcccc;
+      border: 1px solid #ff9999; }
+    #backend .login main .btn {
+      background: #00923f;
+      border-color: #00923f;
+      color: #fff;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600; }
+    #backend .login main label {
+      line-height: 20px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 11px;
+      font-weight: 400; }
+  #backend header {
+    height: 110px;
+    border-bottom: 1px solid #ccc; }
+    #backend header .container {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    #backend header .brand {
+      padding: 18px 0 !important; }
+    #backend header form .btn {
+      color: #999999;
+      background: #e5e5e5;
+      padding: 3px 40px;
+      height: 40px;
+      font-size: 20px; }
+    #backend header form .form-control {
+      height: 40px;
+      font-style: italic;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 300; }
+    #backend header .log button {
+      background: none;
+      border: 0;
+      color: #666;
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      font-weight: 600; }
+    #backend header .log .dropdown-toggle img {
+      display: inline-block;
+      width: 32px; }
+    #backend header .log .dropdown-menu {
+      text-transform: uppercase;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+      #backend header .log .dropdown-menu a {
+        color: #999;
+        font-family: "Open Sans", sans-serif;
+        font-size: 13px;
+        font-weight: 600; }
+  #backend main {
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+    display: block; }
 
 /*# sourceMappingURL=uam.css.map */
 

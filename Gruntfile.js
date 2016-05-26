@@ -42,7 +42,8 @@ module.exports = function (grunt) {
           src: [
             "assets/css/*.css",
             "assets/js/*.js",
-            "*.html"
+            "*.html",
+            "backend/*.html"
           ]
         },
         options: {
