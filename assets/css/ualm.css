@@ -50,6 +50,10 @@ form {
 *:focus {
   outline: none; }
 
+hr {
+  border-top: 1px solid #ccc;
+  width: 100%; }
+
 /** TENOR PAGINAS INTERNAS */
 #tenor-page {
   padding: 0 !important;
@@ -238,8 +242,6 @@ footer {
   font-family: "Open Sans", sans-serif;
   font-size: 11px;
   font-weight: 400; }
-  footer hr {
-    border-top: 1px solid #b9b9b9; }
   footer .container:first-child {
     letter-spacing: 0.5px;
     line-height: 40px;
@@ -1416,21 +1418,169 @@ section {
       width: 32px; }
     #backend header .log .dropdown-menu {
       text-transform: uppercase;
+      padding: 0;
+      min-width: auto;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       -ms-border-radius: 0;
       border-radius: 0; }
+      #backend header .log .dropdown-menu:before {
+        content: "";
+        background-color: #fff;
+        border-left: 1px solid rgba(0, 0, 0, 0.15);
+        border-top: 1px solid rgba(0, 0, 0, 0.15);
+        position: absolute;
+        top: -6px;
+        right: 10px;
+        width: 10px;
+        height: 10px;
+        transform: rotate(45deg); }
       #backend header .log .dropdown-menu a {
+        padding: 12px 20px;
         color: #999;
         font-family: "Open Sans", sans-serif;
         font-size: 13px;
         font-weight: 600; }
+        #backend header .log .dropdown-menu a:hover, #backend header .log .dropdown-menu a:focus {
+          background-color: #fff; }
   #backend main {
     width: 100%;
     height: auto;
     float: left;
     position: relative;
     display: block; }
+  #backend .tabs {
+    background: #fff;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    border: 1px solid #ccc; }
+    #backend .tabs .nav li {
+      padding: 0 40px; }
+    #backend .tabs .nav li a {
+      color: #333;
+      text-transform: uppercase;
+      border: 0px;
+      padding: 20px 15px;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 700; }
+      #backend .tabs .nav li a:hover {
+        background: transparent; }
+    #backend .tabs .nav .active a {
+      border: 0px;
+      border-bottom: 3px solid #009240;
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+  #backend .tab-content table caption {
+    color: #363636;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 600; }
+  #backend .tab-content table.dataTable.no-footer {
+    border: 0; }
+  #backend .tab-content thead {
+    display: none; }
+  #backend .tab-content td {
+    padding: 10px 0 50px;
+    color: #989898;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 500; }
+    #backend .tab-content td label {
+      display: block;
+      color: #333;
+      font-family: "Open Sans", sans-serif;
+      font-size: 14px;
+      font-weight: 600; }
+    #backend .tab-content td a img {
+      margin: 5px auto;
+      width: 32px;
+      text-align: center; }
+  #backend .tab-content .center {
+    padding: 10px 10px 20px; }
+    #backend .tab-content .center label {
+      width: 100%;
+      position: relative;
+      text-align: center; }
+    #backend .tab-content .center a, #backend .tab-content .center span {
+      width: 100%;
+      text-align: center;
+      position: relative;
+      display: block; }
+    #backend .tab-content .center span {
+      background-color: #444644;
+      color: #fff;
+      padding: 10px 15px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      border-radius: 4px; }
+  #backend .tab-content .center:last-child {
+    vertical-align: middle; }
+    #backend .tab-content .center:last-child a {
+      color: #fff;
+      padding: 10px 15px;
+      text-transform: uppercase;
+      background-color: #999999;
+      font-family: "Open Sans", sans-serif;
+      font-size: 12px;
+      font-weight: 700; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+    position: absolute;
+    padding: 0;
+    right: -15px;
+    background-color: #fff; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button {
+    color: #999 !important;
+    margin-left: 0;
+    border: 0;
+    border-right: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    font-weight: 600; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    border: 0; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button.current,
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover,
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #444644;
+    color: #fff !important;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-left: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .previous,
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .next {
+    text-indent: -666rem;
+    white-space: nowrap; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .previous {
+    border-left: 1px solid #ccc;
+    background: url("../img/previous_pag.svg") center no-repeat;
+    background-size: 28px; }
+    #backend .tab-content .dataTables_wrapper .dataTables_paginate .previous:hover, #backend .tab-content .dataTables_wrapper .dataTables_paginate .previous:focus {
+      background: #ccc url("../img/previous_pag.svg") center no-repeat;
+      background-size: 28px; }
+  #backend .tab-content .dataTables_wrapper .dataTables_paginate .next {
+    border-right: 1px solid #ccc;
+    background: url("../img/next_pag.svg") center no-repeat;
+    background-size: 28px; }
+    #backend .tab-content .dataTables_wrapper .dataTables_paginate .next:hover, #backend .tab-content .dataTables_wrapper .dataTables_paginate .next:focus {
+      background: #ccc url("../img/next_pag.svg") center no-repeat;
+      background-size: 28px; }
 
 /*# sourceMappingURL=uam.css.map */
 
