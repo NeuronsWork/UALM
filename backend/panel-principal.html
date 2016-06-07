@@ -47,6 +47,7 @@
                     <div class="row">
                         <button class="dropdown-toggle pull-right" data-toggle="dropdown">
                             <img src="../assets/img/user.svg" class="img-responsive img-center">ELIZABETH ALBERT
+                            <img src="../assets/img/arrow-down.svg" class="img-responsive">
                         </button>
                         <div class="dropdown-status dropdown-menu pull-right">
                             <a href="login.html">cerrar sesión</a>
@@ -469,29 +470,115 @@
                                 <div role="tabpanel" class="tab-pane fade" id="estadisticas">
                                     <h5>ESTADÍSTICAS</h5>
                                     <hr>
-                                    <div class="col-md-12 row">
-                                        <div class="col-md-6" id="datetimepicker5"></div>
-                                        <div class='col-md-3'>
-                                            <div class="form-group">
-                                                <label>Fecha Inicial</label>
-                                                <div class='input-group date' id='datetimepicker6'>
-                                                    <input type='text' class="form-control" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-6 row">
+                                                <div class="row">
+                                                    <div class='col-md-6 dp'>
+                                                        <div class="row">
+                                                            <label class="col-md-5">Fecha Inicial:</label>
+                                                            <div class="form-group col-md-7">
+                                                                <div class='input-group date' id='datetimepicker1'>
+                                                                    <input type='text' class="form-control" />
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class='col-md-6 dp'>
+                                                        <div class="row">
+                                                            <label class="col-md-5">Fecha Final:</label>
+                                                            <div class="form-group col-md-7">
+                                                                <div class='input-group date' id='datetimepicker2'>
+                                                                    <input type='text' class="form-control" />
+                                                                    <span class="input-group-addon">
+                                                                        <span class="glyphicon glyphicon-calendar"></span>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                            <div class="col-md-6">
                                             </div>
                                         </div>
-                                        <div class='col-md-3'>
-                                            <label>Fecha Final</label>
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker7'>
-                                                    <input type='text' class="form-control" />
-                                                    <span class="input-group-addon">
-                                                        <span class="glyphicon glyphicon-calendar"></span>
-                                                    </span>
+                                    </div>
+                                    <hr>
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <form action="" class="form-inline">
+                                                <div class="col-md-6 dp">
+                                                    <div class="row">
+                                                        <label>Registro del pedido de: </label>
+                                                        <input type='text' class="form-control" /> <label>Al</label>
+                                                        <input type='text' class="form-control" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <a href="#" class="btn pull-right download">descargar</a>
+                                                        <a href="#" class="btn pull-right print">IMPRIMIR</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 tbl tbl-edit">
+                                        <div class="row">
+                                            <div class="head">
+                                                <div class="col-md-9 text-left">Nombre del Servicio</div>
+                                                <div class="col-md-1 text-center">Fecha</div>
+                                                <div class="col-md-1 text-center">Nº de Pedidos</div>
+                                                <div class="col-md-1 text-center">Precio Total</div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="item">
+                                                    <div class="col-md-9 text-left">Parámetros Hídricos: CC, PM, Densidad aparente, Textura</div>
+                                                    <div class="col-md-1 text-center">27/09/2016</div>
+                                                    <div class="col-md-1 text-center">
+                                                        <input type="text" class="form-control cant" value="30">
+                                                    </div>
+                                                    <div class="col-md-1 text-center">
+                                                        <input type="text" class="form-control total" value="S/. 150.00" readonly="readonly">
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-md-9 text-left">Parámetros Hídricos: CC, PM, Densidad aparente, Textura</div>
+                                                    <div class="col-md-1 text-center">27/09/2016</div>
+                                                    <div class="col-md-1 text-center">
+                                                        <input type="text" class="form-control cant" value="30">
+                                                    </div>
+                                                    <div class="col-md-1 text-center">
+                                                        <input type="text" class="form-control total" value="S/. 150.00" readonly="readonly">
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <div class="total total1">
+                                                <div class="col-md-9"></div>
+                                                <div class="col-md-1">total</div>
+                                                <div class="col-md-1">300</div>
+                                                <div class="col-md-1">S/. 154.00</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <nav>
+                                                <ul class="pagination">
+                                                    <li>
+                                                        <a href="#" aria-label="Previous"><img src="../assets/img/pag_arrow_left.svg" class="img-responsive img-center"></a>
+                                                    </li>
+                                                    <li class="active"><a href="#">1</a></li>
+                                                    <li><a href="#">2</a></li>
+                                                    <li><a href="#">3</a></li>
+                                                    <li><a href="#">4</a></li>
+                                                    <li><a href="#">5</a></li>
+                                                    <li>
+                                                        <a href="#" aria-label="Next"><img src="../assets/img/pag_arrow_right.svg" class="img-responsive img-center"></a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
                                         </div>
                                     </div>
                                 </div>
@@ -550,20 +637,19 @@
                 });
             } );
 
-            $(function () {
-                $('#datetimepicker5').datetimepicker({
-                    inline: true,
-                    sideBySide: true
+            $(function(){
+                $('#datetimepicker1').datetimepicker({
+                    format: 'MM/DD/YY'
                 });
-                $('#datetimepicker6').datetimepicker();
-                $('#datetimepicker7').datetimepicker({
+                $('#datetimepicker2').datetimepicker({
+                    format: 'MM/DD/YY',
                     useCurrent: false //Important! See issue #1075
                 });
-                $("#datetimepicker6").on("dp.change", function (e) {
-                    $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+                $("#datetimepicker1").on("dp.change", function (e) {
+                    $('#datetimepicker2').data("DateTimePicker").minDate(e.date);
                 });
-                $("#datetimepicker7").on("dp.change", function (e) {
-                    $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+                $("#datetimepicker2").on("dp.change", function (e) {
+                    $('#datetimepicker1').data("DateTimePicker").maxDate(e.date);
                 });
             });
 

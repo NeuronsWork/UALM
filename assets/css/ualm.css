@@ -1323,6 +1323,59 @@ section {
   /**
    * MAIN
    */ }
+  #backend .print {
+    background: #dddddd;
+    border: 0;
+    padding: 10px 40px;
+    color: #999;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600; }
+  #backend .download {
+    margin-left: 10px;
+    background: #249119 !important;
+    border: 0;
+    padding: 10px 40px;
+    color: #fff !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 600; }
+  #backend nav {
+    margin-top: 50px; }
+    #backend nav .pagination li:first-child, #backend nav .pagination li:last-child {
+      background: none;
+      padding-left: 0; }
+      #backend nav .pagination li:first-child a, #backend nav .pagination li:last-child a {
+        padding: 6px;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        border-radius: 0; }
+        #backend nav .pagination li:first-child a img, #backend nav .pagination li:last-child a img {
+          width: 30px;
+          border: 0px; }
+    #backend nav .pagination li {
+      background: none;
+      padding-left: 0; }
+      #backend nav .pagination li a {
+        color: #999;
+        padding: 9px 16px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 500; }
+        #backend nav .pagination li a:focus, #backend nav .pagination li a:hover {
+          color: #fff;
+          background-color: #444644;
+          border-color: #444644; }
+    #backend nav .pagination .active > a,
+    #backend nav .pagination .active > a:focus,
+    #backend nav .pagination .active > a:hover {
+      color: #fff;
+      background-color: #444644;
+      border-color: #444644; }
   #backend .bg {
     width: 100%;
     height: 100%;
@@ -1422,13 +1475,20 @@ section {
       font-family: "Open Sans", sans-serif;
       font-size: 13px;
       font-weight: 600; }
-    #backend header .log .dropdown-toggle img {
+    #backend header .log .dropdown-toggle img:first-child {
+      margin-right: 5px;
       display: inline-block;
       width: 32px; }
+    #backend header .log .dropdown-toggle img:last-child {
+      margin-left: 5px;
+      margin-top: -3px;
+      display: inline-block;
+      width: 16px; }
     #backend header .log .dropdown-menu {
       text-transform: uppercase;
       padding: 0;
       min-width: auto;
+      padding: 12px;
       -webkit-border-radius: 0;
       -moz-border-radius: 0;
       -ms-border-radius: 0;
@@ -1559,10 +1619,10 @@ section {
       font-size: 12px;
       font-weight: 700; }
   #backend .tab-content .dataTables_wrapper .dataTables_paginate {
-    margin-top: 15px;
+    margin-top: 70px;
     position: absolute;
     padding: 0;
-    right: -15px;
+    right: -30px;
     background-color: #fff; }
   #backend .tab-content .dataTables_wrapper .dataTables_paginate .paginate_button {
     color: #999 !important;
@@ -1641,26 +1701,6 @@ section {
         font-family: "Open Sans", sans-serif;
         font-size: 14px;
         font-weight: 300; }
-      #backend .view-item .input-data .print {
-        background: #dddddd;
-        border: 0;
-        padding: 10px 40px;
-        color: #999;
-        text-transform: uppercase;
-        font-family: "Open Sans", sans-serif;
-        font-size: 12px;
-        font-weight: 600; }
-      #backend .view-item .input-data .download {
-        margin-left: 10px;
-        background: #249119;
-        border: 0;
-        padding: 10px 40px;
-        color: #fff;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-family: "Open Sans", sans-serif;
-        font-size: 12px;
-        font-weight: 600; }
     #backend .view-item .tbl {
       margin: 30px 0; }
       #backend .view-item .tbl .head {
@@ -1798,20 +1838,36 @@ section {
           border-bottom: 0; }
       #backend .view-item .tbl-edit .foot .item:last-child > div {
         border-bottom: 0; }
-    #backend .view-item .tbl-edit .total > div:nth-child(2) {
-      -webkit-border-radius: 6px 0 0 6px;
-      -moz-border-radius: 6px 0 0 6px;
-      -ms-border-radius: 6px 0 0 6px;
-      border-radius: 6px 0 0 6px; }
-    #backend .view-item .tbl-edit .total > div:nth-child(2), #backend .view-item .tbl-edit .total > div:last-child {
-      background: #999;
-      border-right: 0; }
-    #backend .view-item .tbl-edit .total > div:last-child {
-      border-right: 0;
-      -webkit-border-radius: 0 6px 6px 0;
-      -moz-border-radius: 0 6px 6px 0;
-      -ms-border-radius: 0 6px 6px 0;
-      border-radius: 0 6px 6px 0; }
+    #backend .view-item .tbl-edit .total {
+      width: 100%;
+      float: left;
+      position: relative; }
+      #backend .view-item .tbl-edit .total > div:nth-child(2) {
+        -webkit-border-radius: 6px 0 0 6px;
+        -moz-border-radius: 6px 0 0 6px;
+        -ms-border-radius: 6px 0 0 6px;
+        border-radius: 6px 0 0 6px; }
+      #backend .view-item .tbl-edit .total > div:nth-child(2), #backend .view-item .tbl-edit .total > div:last-child {
+        background: #999;
+        border-right: 0; }
+      #backend .view-item .tbl-edit .total > div:last-child {
+        border-right: 0;
+        -webkit-border-radius: 0 6px 6px 0;
+        -moz-border-radius: 0 6px 6px 0;
+        -ms-border-radius: 0 6px 6px 0;
+        border-radius: 0 6px 6px 0; }
+    #backend .view-item .tbl-edit .total1 {
+      margin-top: 30px; }
+      #backend .view-item .tbl-edit .total1 > div {
+        padding: 10px 0 !important;
+        text-align: center;
+        font-family: "Open Sans", sans-serif;
+        font-size: 17px;
+        font-weight: 500; }
+        #backend .view-item .tbl-edit .total1 > div:nth-child(3) {
+          background: #999;
+          padding: 20px 0px;
+          border-right: 0; }
     #backend .view-item a.btn {
       border: 1px solid #cbcbcb;
       background: #fff;
@@ -1824,6 +1880,40 @@ section {
     #backend .view-item a.btn-return {
       background: #999999;
       color: #fff; }
+  #backend #datetimepicker0 .datepicker .datepicker-days .table-condensed thead,
+  #backend #datetimepicker1 .datepicker .datepicker-days .table-condensed thead,
+  #backend #datetimepicker2 .datepicker .datepicker-days .table-condensed thead {
+    display: table-header-group !important; }
+  #backend #datetimepicker0 .datepicker .datepicker-days .table-condensed tbody td.day,
+  #backend #datetimepicker1 .datepicker .datepicker-days .table-condensed tbody td.day,
+  #backend #datetimepicker2 .datepicker .datepicker-days .table-condensed tbody td.day {
+    padding: 10px 0 !important; }
+  #backend #datetimepicker0 .timepicker .timepicker-picker .table-condensed td,
+  #backend #datetimepicker1 .timepicker .timepicker-picker .table-condensed td,
+  #backend #datetimepicker2 .timepicker .timepicker-picker .table-condensed td {
+    padding: 10px !important; }
+    #backend #datetimepicker0 .timepicker .timepicker-picker .table-condensed td a,
+    #backend #datetimepicker1 .timepicker .timepicker-picker .table-condensed td a,
+    #backend #datetimepicker2 .timepicker .timepicker-picker .table-condensed td a {
+      padding: 0px !important; }
+  #backend #datetimepicker0 input,
+  #backend #datetimepicker1 input,
+  #backend #datetimepicker2 input {
+    border-right: 0;
+    padding: 6px 5px; }
+  #backend #datetimepicker0 .input-group-addon,
+  #backend #datetimepicker1 .input-group-addon,
+  #backend #datetimepicker2 .input-group-addon {
+    padding: 0 4px;
+    background: transparent;
+    font-size: 24px;
+    color: #ccc; }
+  #backend #estadisticas .dp label {
+    color: #333;
+    line-height: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 300; }
 
 /*# sourceMappingURL=uam.css.map */
 
