@@ -26,7 +26,7 @@ function plusItemFrm(){
         c +=        '<div class="row">';
         c +=            '<div class="col-xs-12 col-sm-4 col-md-4">';
         c +=                '<div class="row select">';
-        c +=                    '<select class="form-control">';
+        c +=                    '<select class="form-control" required>';
         c +=                        '<option value="1">Analisis de suelo</option>';
         c +=                        '<option value="2">Analisis de suelo</option>';
         c +=                        '<option value="3">Analisis de suelo</option>';
@@ -37,7 +37,7 @@ function plusItemFrm(){
         c +=                '</div>';
         c +=                '<div class="col-xs-12 col-sm-4 col-md-4">';
         c +=                    '<div class="row select">';
-        c +=                        '<select class="form-control">';
+        c +=                        '<select class="form-control" required>';
         c +=                            '<option>Para riego</option>';
         c +=                            '<option>Para riego</option>';
         c +=                            '<option>Para riego</option>';
@@ -48,7 +48,7 @@ function plusItemFrm(){
         c +=                '</div>';
         c +=                '<div class="col-xs-12 col-sm-4 col-md-4">';
         c +=                    '<div class="row select">';
-        c +=                        '<select class="form-control">';
+        c +=                        '<select class="form-control" required>';
         c +=                            '<option>Ph</option>';
         c +=                            '<option>Ph</option>';
         c +=                            '<option>Ph</option>';
@@ -61,7 +61,7 @@ function plusItemFrm(){
         c +=        '</div>';
         c +=        '<div class="col-xs-12 col-sm-12 col-md-4 inputs-text">';
         c +=            '<div class="row">';
-        c +=                '<input type="text" class="form-control col-md-4" name="" value="S/ 50.00" onkeypress="return justNumbers(event);">';
+        c +=                '<input type="text" class="form-control col-md-4" name="" value="S/ 50.00" onkeypress="return justNumbers(event);" required>';
         c +=                '<input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>';
         c +=                '<input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>';
         c +=            '</div>';

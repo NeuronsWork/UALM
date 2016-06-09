@@ -133,23 +133,20 @@ header {
     padding: 0; }
   header .menu li {
     border-left: 1px solid #dcdcdc;
-    float: left;
     height: 100px;
-    min-width: 250px;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
     header .menu li a {
-      padding: 20px;
+      padding: 30px 20px;
+      text-align: left;
       display: block;
       width: 100%;
       color: #666666;
       letter-spacing: -1px;
       text-decoration: none;
       line-height: 18px;
+      max-height: 100px;
       font-family: "Open Sans", sans-serif;
       font-size: 16px;
       font-weight: 400; }
@@ -769,7 +766,8 @@ aside.sidebar_qs {
       width: 100%;
       position: relative;
       background: #fff;
-      float: left; }
+      float: left;
+      margin-top: 0; }
       aside.sidebar_qs .carousel footer .link {
         color: #999;
         display: block;
@@ -1915,6 +1913,32 @@ section {
     font-size: 14px;
     font-weight: 300; }
 
+/**
+ * ************************************
+ * RESPONSIVE
+ * ************************************
+ */
+/*==========  Non-Mobile First Method  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  header .menu li a {
+    font-size: 12px;
+    font-weight: 600;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+  header .menu li a span.subtitulo {
+    font-size: 12px; }
+
+  header .menu li a span.img {
+    margin-right: 5px; }
+
+  header .menu .cotizaciones {
+    width: 130px; } }
+/* Medium Devices, Desktops */
+/* Small Devices, Tablets */
+/* Extra Small Devices, Phones */
+/* Custom, iPhone Retina */
 /*# sourceMappingURL=uam.css.map */
 
 /*# sourceMappingURL=ualm.css.map */
