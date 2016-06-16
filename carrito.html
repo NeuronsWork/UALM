@@ -48,7 +48,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6 menu-info">
                         <ul class="list-unstyled nav-justified">
                             <li><img src="assets/img/faq.svg" class="pull-left"><a href="ayuda.html">Necesitas ayuda?</a></li>
-                            <li><img src="assets/img/info.svg" class="pull-left"><a href="cotizacion.html">Información de la Cotización</a></li>
+                            <li><img src="assets/img/info.svg" class="pull-left"><a href="carrito.html">Información de la Cotización</a></li>
                             <li><img src="assets/img/cursor.svg" class="pull-left"><a href="index.html">Visita nuestra la Web</a></li>
                         </ul>
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2">
                         <div class="cotizaciones pull-right">
-                            <a href="cotizacion.html">
+                            <a href="carrito.html">
                                 <span>
                                     <img src="assets/img/cotizacion.svg" class="img-center"><br>
                                     5 Cotizaciones
@@ -132,6 +132,7 @@
                     <div class="row section">
                         <article>
                             <h3>carrito de servicios</h3>
+                            <input type="hidden" name="igv" id="igv" value="18">
                             <div class="carrito">
                                 <header>
                                     <div class="row col-md-6 pull-left">Nombre del Servicio</div>
@@ -145,7 +146,7 @@
                                     </div>
                                 </header>
                                 <!-- ITEM -->
-                                <div class="item alert alert-dismissible fade in" role="alert" id="serv_1">
+                                <div class="item alert alert-dismissible fade in" role="alert" id="item-1">
                                     <div class="row col-md-6 pull-left">
                                         <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 1</h2>
                                     </div>
@@ -157,20 +158,20 @@
                                                 </button>
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                <input type="text" class="form-control unit item_precio" name="input_unit" data-precio="20" value="S/.20" readonly="readonly">
                                             </div>
                                             <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control cant" name="input_unit" value="1" readonly="readonly">
+                                                <input type="text" class="form-control cant item_cantidad" name="input_unit" value="1" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 1);">
                                             </div>
                                             <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
+                                                <input type="text" class="form-control total item_total" name="input_total" data-total="20" value="S/.20" readonly="readonly">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /ITEM -->
                                 <!-- ITEM -->
-                                <div class="item alert alert-dismissible fade in" role="alert" id="serv_2">
+                                <div class="item alert alert-dismissible fade in" role="alert" id="item-2">
                                     <div class="row col-md-6 pull-left">
                                         <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 2</h2>
                                     </div>
@@ -182,63 +183,13 @@
                                                 </button>
                                             </div>
                                             <div class="col-md-3">
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                <input type="text" class="form-control unit item_precio" name="input_unit" data-precio="20" value="S/.20" readonly="readonly">
                                             </div>
                                             <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control cant" name="input_unit" value="1" readonly="readonly">
+                                                <input type="text" class="form-control cant item_cantidad" name="input_unit" value="1" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 2);">
                                             </div>
                                             <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item alert alert-dismissible fade in" role="alert" id="serv_3">
-                                    <div class="row col-md-6 pull-left">
-                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 3</h2>
-                                    </div>
-                                    <div class="row col-md-6 pull-right inputs">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <button type="button" class="delete_item close" data-dismiss="alert" aria-label="Close">
-                                                    <img src="assets/img/delete.svg" class="img-responsive img-center" alt="">
-                                                </button>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control cant" name="input_unit" value="1" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item alert alert-dismissible fade in" role="alert" id="serv_4">
-                                    <div class="row col-md-6 pull-left">
-                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 4</h2>
-                                    </div>
-                                    <div class="row col-md-6 pull-right inputs">
-                                        <div class="row">
-                                            <div class="col-md-3 text-center">
-                                                <button type="button" class="delete_item close" data-dismiss="alert" aria-label="Close">
-                                                    <img src="assets/img/delete.svg" class="img-responsive img-center" alt="">
-                                                </button>
-                                            </div>
-                                            <div class="col-md-3">
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control cant" name="input_unit" value="1" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-3 text-center">
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
+                                                <input type="text" class="form-control total item_total" name="input_total" data-total="20" value="S/.20" readonly="readonly">
                                             </div>
                                         </div>
                                     </div>
@@ -247,20 +198,61 @@
                                 <footer>
                                     <div class="col-md-3 col-md-offset-9 pull-right subtotal">
                                         <div class="pull-left">SUB TOTAL</div>
-                                        <div class="pull-right">S/.150.00</div>
+                                        <div class="pull-right">S/ <span id="sub_total">40</span></div>
                                     </div>
                                     <div class="col-md-3 col-md-offset-9 pull-right igv">
                                         <div class="pull-left">I.G.V</div>
-                                        <div class="pull-right">S/.54.00</div>
+                                        <div class="pull-right">S/ <span id="igv_subtotal">7.2</span></div>
                                     </div>
                                     <div class="col-md-3 col-md-offset-9 pull-right total">
                                         <div class="pull-left">total</div>
-                                        <div class="pull-right">S/.154.00</div>
+                                        <div class="pull-right">S/ <span id="total">47.2</span></div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 others">
-                                        <a class="btn" href="carrito-b.html">COTIZAR Y CONTINUAR</a>
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12 others other-cotizar">
+                                        <button class="btn">COTIZAR Y CONTINUAR</button>
                                         <p><span>Nota:</span> Los resultados estaran listos en 3 dias habiles, lorem ipsum</p>
                                     </div>
+
+                                    <div class="col-md-12 col-sm-12 col-xs-12 others other-datos">
+                                        <h2>tus datos son importantes</h2>
+                                        <form method="post" action="">
+                                            <div class="col-md-10">
+                                                <div class="inputs">
+                                                    <div class="col-md-3">
+                                                        Nombre<input type="text" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        Apellido<input type="text" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        Teléfono<input type="text" class="form-control" required>
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        Correo electronico<input type="text" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                Que desea emitir?
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <input type="radio" name="radio" id="radio1" checked/>
+                                                        <label for="radio1"><span><span></span></span>Boleto</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <div class="row">
+                                                        <input type="radio" name="radio" id="radio2" checked/>
+                                                        <label for="radio2"><span><span></span></span>Factura</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                        <a class="btn return pull-left" href="servicios.html">VOLVER A SERVICIOS</a>
+                                        <button class="btn pull-right" data-toggle="modal" data-target="#gracias">FINALIZAR COTIZACION</button>
+                                    </div>
+
                                 </footer>
                             </div>
                         </article>
@@ -298,6 +290,22 @@
             </div>
         </footer>
         <!-- /FOOTER -->
+
+        <!-- MODAL -->
+        <div class="modal fade" id="gracias" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><img src="assets/img/close_modal.svg" class="img-responsive img-center" alt=""></button>
+                    <div class="modal-body">
+                        <h4 class="text-center">GRACIAS!</h4>
+                        <p class="text-center">Tu cotización nos ha llegado correctamente,<br>en unos momentos nos comunicaremos contigo.</p>
+                        <p class="text-center"><a href="#"><img src="assets/img/download.svg" class="img-responsive">Descargar TU cotización en pdf</a></p>
+                        <div class="col-md-12 text-center"><button class="btn" data-dismiss="modal" aria-label="Close">VOLVER</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /MODAL -->
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>

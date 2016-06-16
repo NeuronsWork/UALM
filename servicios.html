@@ -48,7 +48,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6 menu-info">
                         <ul class="list-unstyled nav-justified">
                             <li><img src="assets/img/faq.svg" class="pull-left"><a href="ayuda.html">Necesitas ayuda?</a></li>
-                            <li><img src="assets/img/info.svg" class="pull-left"><a href="cotizacion.html">Información de la Cotización</a></li>
+                            <li><img src="assets/img/info.svg" class="pull-left"><a href="carrito.html">Información de la Cotización</a></li>
                             <li><img src="assets/img/cursor.svg" class="pull-left"><a href="index.html">Visita nuestra la Web</a></li>
                         </ul>
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2">
                         <div class="cotizaciones pull-right">
-                            <a href="cotizacion.html">
+                            <a href="carrito.html">
                                 <span>
                                     <img src="assets/img/cotizacion.svg" class="img-center"><br>
                                     5 Cotizaciones
@@ -125,7 +125,7 @@
         <!-- MAIN -->
         <main>
             <!-- NOSOTROS -->
-            <div class="container">
+            <div class="container mrgBot">
                 <aside class="col-xs-12 col-sm-4 col-md-4 sidebar sidebar_qs">
                     <!-- SUBMENU -->
                     <div class="row">
@@ -209,191 +209,193 @@
                             <h3>analisis y costos</h3>
                             <hr>
                             <div class="servicios">
-                                <!-- ITEM -->
-                                <div class="item">
-                                    <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 1</h2>
-                                    <div class="arrow_box"></div>
-                                    <div class="row col-md-7 pull-left inputs">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                Precio Unitario
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                Cantidad
-                                                <div class="row select">
-                                                    <select class="form-control" required>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">...</option>
-                                                        <option value="10">10</option>
-                                                    </select>
+                                <div class="lst-items">
+                                    <!-- ITEM -->
+                                    <div class="item">
+                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 1</h2>
+                                        <div class="arrow_box"></div>
+                                        <div class="row col-md-7 pull-left inputs">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Precio Unitario
+                                                    <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Cantidad
+                                                    <div class="row select">
+                                                        <select class="form-control" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">...</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Precio Total
+                                                    <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                Precio Total
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
+                                        </div>
+                                        <div class="row col-md-5 pull-right">
+                                            <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@01">AGREGAR</button>
                                         </div>
                                     </div>
-                                    <div class="row col-md-5 pull-right">
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@01">AGREGAR</button>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item">
-                                    <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 2</h2>
-                                    <div class="arrow_box"></div>
-                                    <div class="row col-md-7 pull-left inputs">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                Precio Unitario
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                Cantidad
-                                                <div class="row select">
-                                                    <select class="form-control" required>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">...</option>
-                                                        <option value="10">10</option>
-                                                    </select>
+                                    <!-- /ITEM -->
+                                    <!-- ITEM -->
+                                    <!-- <div class="item">
+                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 2</h2>
+                                        <div class="arrow_box"></div>
+                                        <div class="row col-md-7 pull-left inputs">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Precio Unitario
+                                                    <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Cantidad
+                                                    <div class="row select">
+                                                        <select class="form-control" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">...</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Precio Total
+                                                    <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                Precio Total
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-md-5 pull-right">
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@02">AGREGAR</button>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item">
-                                    <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 3</h2>
-                                    <div class="arrow_box"></div>
-                                    <div class="row col-md-7 pull-left inputs">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                Precio Unitario
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                Cantidad
-                                                <div class="row select">
-                                                    <select class="form-control" required>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">...</option>
-                                                        <option value="10">10</option>
-                                                    </select>
+                                        <div class="row col-md-5 pull-right">
+                                            <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@02">AGREGAR</button>
+                                        </div>
+                                    </div> -->
+                                    <!-- /ITEM -->
+                                    <!-- ITEM -->
+                                    <!-- <div class="item">
+                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 3</h2>
+                                        <div class="arrow_box"></div>
+                                        <div class="row col-md-7 pull-left inputs">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Precio Unitario
+                                                    <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Cantidad
+                                                    <div class="row select">
+                                                        <select class="form-control" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">...</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Precio Total
+                                                    <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                Precio Total
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-md-5 pull-right">
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@03">AGREGAR</button>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item">
-                                    <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 4</h2>
-                                    <div class="arrow_box"></div>
-                                    <div class="row col-md-7 pull-left inputs">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                Precio Unitario
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                Cantidad
-                                                <div class="row select">
-                                                    <select class="form-control" required>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">...</option>
-                                                        <option value="10">10</option>
-                                                    </select>
+                                        <div class="row col-md-5 pull-right">
+                                            <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@03">AGREGAR</button>
+                                        </div>
+                                    </div> -->
+                                    <!-- /ITEM -->
+                                    <!-- ITEM -->
+                                    <!-- <div class="item">
+                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 4</h2>
+                                        <div class="arrow_box"></div>
+                                        <div class="row col-md-7 pull-left inputs">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Precio Unitario
+                                                    <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Cantidad
+                                                    <div class="row select">
+                                                        <select class="form-control" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">...</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Precio Total
+                                                    <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                Precio Total
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-md-5 pull-right">
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@04">AGREGAR</button>
-                                    </div>
-                                </div>
-                                <!-- /ITEM -->
-                                <!-- ITEM -->
-                                <div class="item">
-                                    <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 5</h2>
-                                    <div class="arrow_box"></div>
-                                    <div class="row col-md-7 pull-left inputs">
-                                        <div class="row">
-                                            <div class="col-md-4">
-                                                Precio Unitario
-                                                <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
-                                            </div>
-                                            <div class="col-md-4 text-center">
-                                                Cantidad
-                                                <div class="row select">
-                                                    <select class="form-control" required>
-                                                        <option value="1">1</option>
-                                                        <option value="2">2</option>
-                                                        <option value="3">3</option>
-                                                        <option value="4">4</option>
-                                                        <option value="5">5</option>
-                                                        <option value="6">...</option>
-                                                        <option value="10">10</option>
-                                                    </select>
+                                        <div class="row col-md-5 pull-right">
+                                            <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@04">AGREGAR</button>
+                                        </div>
+                                    </div> -->
+                                    <!-- /ITEM -->
+                                    <!-- ITEM -->
+                                    <!-- <div class="item">
+                                        <h2>ANALISIS Completo de Rutina: pH, CE, MO, P, K, Carbonatos 5</h2>
+                                        <div class="arrow_box"></div>
+                                        <div class="row col-md-7 pull-left inputs">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Precio Unitario
+                                                    <input type="text" class="form-control unit" name="input_unit" value="S/.20.00" readonly="readonly">
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Cantidad
+                                                    <div class="row select">
+                                                        <select class="form-control" required>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                            <option value="6">...</option>
+                                                            <option value="10">10</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4 text-center">
+                                                    Precio Total
+                                                    <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 text-center">
-                                                Precio Total
-                                                <input type="text" class="form-control total" name="input_total" value="S/.60.00" readonly="readonly">
-                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="row col-md-5 pull-right">
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@05">AGREGAR</button>
-                                    </div>
+                                        <div class="row col-md-5 pull-right">
+                                            <button class="btn pull-right" data-toggle="modal" data-target="#Modal" data-whatever="@05">AGREGAR</button>
+                                        </div>
+                                    </div> -->
+                                    <!-- /ITEM -->
                                 </div>
-                                <!-- /ITEM -->
                                 <nav class="pull-right">
                                     <ul class="pagination">
                                         <li>
                                             <a href="#" aria-label="Previous"><img src="assets/img/pag_arrow_left.svg" class="img-responsive img-center"></a>
                                         </li>
                                         <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
+                                        <!-- <li><a href="#">2</a></li>
                                         <li><a href="#">3</a></li>
                                         <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">5</a></li> -->
                                         <li>
                                             <a href="#" aria-label="Next"><img src="assets/img/pag_arrow_right.svg" class="img-responsive img-center"></a>
                                         </li>

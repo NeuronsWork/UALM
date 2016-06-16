@@ -48,7 +48,7 @@
                     <div class="col-xs-6 col-sm-6 col-md-6 menu-info">
                         <ul class="list-unstyled nav-justified">
                             <li><img src="assets/img/faq.svg" class="pull-left"><a href="ayuda.html">Necesitas ayuda?</a></li>
-                            <li><img src="assets/img/info.svg" class="pull-left"><a href="cotizacion.html">Información de la Cotización</a></li>
+                            <li><img src="assets/img/info.svg" class="pull-left"><a href="carrito.html">Información de la Cotización</a></li>
                             <li><img src="assets/img/cursor.svg" class="pull-left"><a href="index.html">Visita nuestra la Web</a></li>
                         </ul>
                     </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="col-xs-12 col-sm-2 col-md-2">
                         <div class="cotizaciones pull-right">
-                            <a href="cotizacion.html">
+                            <a href="carrito.html">
                                 <span>
                                     <img src="assets/img/cotizacion.svg" class="img-center"><br>
                                     5 Cotizaciones
@@ -292,9 +292,10 @@
                             </div>
                         </div>
                     </div>
-                    <form action="carrito-a.html" method="post" accept-charset="utf-8">
-                        <div id="content-item-frm">
-                            <div class="item-frm">
+                    <form action="carrito.html" name="cotizador" id="cotiz" method="post" accept-charset="utf-8">
+                        <input type="hidden" name="total_items" id="total_items" value="2">
+                        <div class="carrito" id="content-item-frm">
+                            <div class="item-frm" id="item-1">
                                 <div class="col-xs-12 col-sm-12 col-md-8">
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -333,14 +334,14 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-4 inputs-text">
-                                    <div class="row">
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" onkeypress="return justNumbers(event);" required>
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>
+                                    <div class="row item_costos">
+                                        <input type="text" class="form-control col-md-4 item_cantidad" name="" value="1" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 1);" required>
+                                        <input type="text" class="form-control col-md-4 item_precio" data-precio="50" name="" value="S/ 50" readonly>
+                                        <input type="text" class="form-control col-md-4 item_total" data-total="50" name="" value="S/ 50" readonly>
                                     </div>
                                 </div>
                             </div>
-                            <div class="item-frm">
+                            <div class="item-frm" id="item-2">
                                 <div class="col-xs-12 col-sm-12 col-md-8">
                                     <div class="row">
                                         <div class="col-xs-12 col-sm-4 col-md-4">
@@ -379,10 +380,10 @@
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-4 inputs-text">
-                                    <div class="row">
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" onkeypress="return justNumbers(event);" required>
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>
-                                        <input type="text" class="form-control col-md-4" name="" value="S/ 50.00" readonly>
+                                    <div class="row item_costos">
+                                        <input type="text" class="form-control col-md-4 item_cantidad" name="" value="1" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 2);" required>
+                                        <input type="text" class="form-control col-md-4 item_precio" data-precio="50" name="" value="S/ 50" readonly>
+                                        <input type="text" class="form-control col-md-4 item_total" data-total="50" name="" value="S/ 50" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -394,7 +395,7 @@
                                     Deseas agregar otra muestra?
                                 </a>
                             </div>
-                            <div class="col-xs-12 col-sm-6 col-md-6 text-right total"><span>Total:</span> S/ 100.00</div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 text-right total"><span>Total: S/</span> <span id="sub_total">100</span></div>
                         </div>
                         <hr>
                         <div class="row text-center">

@@ -54,6 +54,9 @@ hr {
   border-top: 1px solid #ccc;
   width: 100%; }
 
+.mrgBot {
+  margin-bottom: 50px; }
+
 /** TENOR PAGINAS INTERNAS */
 #tenor-page {
   padding: 0 !important;
@@ -875,6 +878,14 @@ aside.sidebar_qs {
       font-family: "Open Sans", sans-serif;
       font-size: 13px;
       font-weight: 500; }
+  .section article .servicios, .section article .lst-items {
+    width: 100%;
+    display: block;
+    position: relative;
+    float: left;
+    height: auto; }
+  .section article .lst-items {
+    min-height: 800px; }
   .section article .item {
     position: relative;
     width: 100%;
@@ -1046,6 +1057,8 @@ aside.sidebar_qs {
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
       border-radius: 4px; }
+    .section article .carrito footer .other-datos {
+      display: none; }
     .section article .carrito footer .others, .section article .carrito footer .contacto {
       border-top: 1px solid #ccc;
       padding: 50px 0;
@@ -1201,6 +1214,10 @@ section {
 
 #accordion .panel {
   border: 0px; }
+  #accordion .panel .content-tab {
+    display: none; }
+  #accordion .panel:first-child .content-tab {
+    display: block; }
 #accordion .panel-heading {
   background-color: #fff;
   height: 46px;
@@ -1225,7 +1242,7 @@ section {
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
   #accordion .panel-heading .panel-title > a.accordion-toggle::before,
-  #accordion .panel-heading a[data-toggle="collapse"]::before {
+  #accordion .panel-heading a[data-toggle="icon"]::before {
     background: url("../../assets/img/icon-minus.svg") no-repeat center;
     background-size: 21px;
     float: right;
@@ -1233,7 +1250,7 @@ section {
     height: 45px;
     content: "";
     border-left: 1px solid #ccc; }
-  #accordion .panel-heading .panel-title > a.accordion-toggle.collapsed::before,
+  #accordion .panel-heading .panel-title > a.open::before,
   #accordion .panel-heading a.collapsed[data-toggle="collapse"]::before {
     background-image: url("../../assets/img/icon-plus.svg"); }
 #accordion .panel-body {
@@ -1391,7 +1408,7 @@ section {
     -ms-flex-align: center;
     align-items: center; }
   #backend .login header {
-    padding: 30px 0 20px !important; }
+    padding: 15px 0 !important; }
   #backend .login main {
     padding: 50px 100px;
     background: #e9e9e9;
@@ -1443,7 +1460,7 @@ section {
       font-size: 11px;
       font-weight: 400; }
   #backend header {
-    height: 110px;
+    height: 120px;
     border-bottom: 1px solid #ccc; }
     #backend header .container {
       display: -webkit-flex;
