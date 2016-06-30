@@ -130,26 +130,27 @@
                                         <h2>Contacto</h2>
                                         <p>Llena el formulario y nos pondremos en contacto contigo</p>
                                         <h3>FORMULARIO</h3>
-                                        <form>
+                                        <form action="" method="post">
                                             <div class="inputs">
                                                 <div class="col-md-3">
-                                                    Nombre<input type="text" class="form-control">
+                                                    Nombre<input type="text" name="nombre" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Apellido<input type="text" class="form-control">
+                                                    Apellido<input type="text" name="apellido" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Teléfono<input type="text" class="form-control">
+                                                    Teléfono<input type="text" name="tlf" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Correo electronico<input type="text" class="form-control">
+                                                    Correo electronico<input type="text" name="email" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-12">
                                                     Mensaje
-                                                    <textarea name="" class="form-control" rows="4v"></textarea>
+                                                    <textarea name="asunto" class="form-control" rows="4" required></textarea>
                                                 </div>
                                             </div>
-                                            <button type="button" class="btn send pull-left" data-toggle="modal" data-target="#gracias">ENVIAR</button>
+                                            <!-- <button type="button" class="btn send pull-left" data-toggle="modal" data-target="#gracias">ENVIAR</button> -->
+                                            <button type="submit" class="btn send pull-left">ENVIAR</button>
                                         </form>
                                         <h3>DIRECCIÓN</h3>
                                         <address>
@@ -220,52 +221,58 @@
 
         <script>
             $(document).ready(function(){
-    //Google Maps JS
-    //Set Map
-    function initialize() {
-            var myLatlng = new google.maps.LatLng(-12.0817608,-76.9454152);
-            //var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png'
-            var imagePath = 'assets/img/map.png'
-            var mapOptions = {
-                zoom: 14,
-                center: myLatlng,
-                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                scrollwheel: false,
-                disableDefaultUI: true
-            }
 
-        var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
-        //Callout Content
-        var contentString = 'Some address here..';
-        //Set window width + content
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString,
-            maxWidth: 500
-        });
+                $('form').submit(function(event){
+                    $('#gracias').modal();
+                    event.preventDefault();
+                });
 
-        //Add Marker
-        var marker = new google.maps.Marker({
-            position: myLatlng,
-            map: map,
-            icon: imagePath,
-            title: 'image title'
-        });
+                //Google Maps JS
+                //Set Map
+                function initialize() {
+                        var myLatlng = new google.maps.LatLng(-12.0817608,-76.9454152);
+                        //var imagePath = 'http://m.schuepfen.ch/icons/helveticons/black/60/Pin-location.png'
+                        var imagePath = 'assets/img/map.png'
+                        var mapOptions = {
+                            zoom: 14,
+                            center: myLatlng,
+                            mapTypeId: google.maps.MapTypeId.ROADMAP,
+                            scrollwheel: false,
+                            disableDefaultUI: true
+                        }
 
-        google.maps.event.addListener(marker, 'click', function() {
-            infowindow.open(map,marker);
-        });
+                    var map = new google.maps.Map(document.getElementById('google-map'), mapOptions);
+                    //Callout Content
+                    var contentString = 'Some address here..';
+                    //Set window width + content
+                    var infowindow = new google.maps.InfoWindow({
+                        content: contentString,
+                        maxWidth: 500
+                    });
 
-        //Resize Function
-        google.maps.event.addDomListener(window, "resize", function() {
-            var center = map.getCenter();
-            google.maps.event.trigger(map, "resize");
-            map.setCenter(center);
-        });
-    }
+                    //Add Marker
+                    var marker = new google.maps.Marker({
+                        position: myLatlng,
+                        map: map,
+                        icon: imagePath,
+                        title: 'image title'
+                    });
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map,marker);
+                    });
 
-});
+                    //Resize Function
+                    google.maps.event.addDomListener(window, "resize", function() {
+                        var center = map.getCenter();
+                        google.maps.event.trigger(map, "resize");
+                        map.setCenter(center);
+                    });
+                }
+
+                google.maps.event.addDomListener(window, 'load', initialize);
+
+            });
         </script>
 
     </body>

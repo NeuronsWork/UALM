@@ -850,6 +850,9 @@ aside.sidebar_qs {
   .section article hr {
     border-color: #cccccc;
     border-width: 3px; }
+  .section article hr.linea {
+    margin: 20px 0;
+    border-width: 1px; }
   .section article p, .section article li {
     color: #333333;
     text-align: justify;
@@ -886,6 +889,44 @@ aside.sidebar_qs {
     height: auto; }
   .section article .lst-items {
     min-height: 800px; }
+    .section article .lst-items .page {
+      display: none; }
+      .section article .lst-items .page .bootpag {
+        display: none; }
+    .section article .lst-items .activePage {
+      display: block; }
+  .section article .pages .pagination li.prev a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 44px;
+    height: 44px;
+    text-indent: -666em; }
+    .section article .pages .pagination li.prev a:before {
+      content: "";
+      background-image: url(../../assets/img/pag_arrow_left.svg);
+      background-size: 44px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 44px;
+      height: 44px; }
+  .section article .pages .pagination li.next a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 44px;
+    height: 44px;
+    text-indent: -666em; }
+    .section article .pages .pagination li.next a:before {
+      content: "";
+      background-image: url(../../assets/img/pag_arrow_right.svg);
+      background-size: 44px;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 44px;
+      height: 44px; }
   .section article .item {
     position: relative;
     width: 100%;
@@ -1142,6 +1183,8 @@ aside.sidebar_qs {
           border-radius: 50px; }
         .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span {
           background: #ccc; }
+      .section article .carrito footer .others form.sinborde, .section article .carrito footer .contacto form.sinborde {
+        border-bottom: 0px; }
     .section article .carrito footer .contacto {
       padding: 0;
       border-top: 0; }

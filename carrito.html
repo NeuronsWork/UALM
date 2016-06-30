@@ -216,20 +216,20 @@
 
                                     <div class="col-md-12 col-sm-12 col-xs-12 others other-datos">
                                         <h2>tus datos son importantes</h2>
-                                        <form method="post" action="">
+                                        <form method="post" action="" class="sinborde">
                                             <div class="col-md-10">
                                                 <div class="inputs">
                                                     <div class="col-md-3">
-                                                        Nombre<input type="text" class="form-control" required>
+                                                        Nombre<input type="text" name="nombre" class="form-control" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Apellido<input type="text" class="form-control" required>
+                                                        Apellido<input type="text" name="apellido" class="form-control" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Teléfono<input type="text" class="form-control" required>
+                                                        Teléfono<input type="text" name="tlf" class="form-control" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Correo electronico<input type="text" class="form-control" required>
+                                                        Correo electronico<input type="email" name="email" class="form-control" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -237,20 +237,25 @@
                                                 Que desea emitir?
                                                 <div class="col-md-6">
                                                     <div class="row">
-                                                        <input type="radio" name="radio" id="radio1" checked/>
+                                                        <input type="radio" name="radio" id="radio1" required />
                                                         <label for="radio1"><span><span></span></span>Boleto</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="row">
-                                                        <input type="radio" name="radio" id="radio2" checked/>
+                                                        <input type="radio" name="radio" id="radio2" required />
                                                         <label for="radio2"><span><span></span></span>Factura</label>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="row">
+                                                    <hr class="linea">
+                                                    <a class="btn return pull-left" href="servicios.html">VOLVER A SERVICIOS</a>
+                                                    <button type="submit" class="btn pull-right">FINALIZAR COTIZACION</button>
+                                                </div>
+                                            </div>
                                         </form>
-                                        <a class="btn return pull-left" href="servicios.html">VOLVER A SERVICIOS</a>
-                                        <button class="btn pull-right" data-toggle="modal" data-target="#gracias">FINALIZAR COTIZACION</button>
                                     </div>
 
                                 </footer>
@@ -312,6 +317,15 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/ualm.min.js"></script>
+
+        <script>
+            $(document).ready(function(){
+                $('form').submit(function(event){
+                    $('#gracias').modal();
+                    event.preventDefault();
+                });
+            });
+        </script>
 
     </body>
 </html>
