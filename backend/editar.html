@@ -85,50 +85,51 @@
                                         <div class="col-md-1 text-center">Cantidad</div>
                                         <div class="col-md-1 text-center">Precio Total</div>
                                     </div>
-                                    <div class="body">
-                                        <div class="item">
+                                    <div class="body carrito">
+                                        <input type="hidden" name="igv" id="igv" value="18">
+                                        <div class="item" id="item-1">
                                             <div class="col-md-8 text-left">Parámetros Hídricos: CC, PM, Densidad aparente, Textura</div>
                                             <div class="col-md-1 text-center">N° 162</div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control unit" value="S/.20.00" readonly="readonly">
+                                                <input type="text" class="form-control unit item_precio" data-precio="20" value="S/.20" readonly="readonly">
                                             </div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control cant" value="S/. 30.00">
+                                                <input type="text" class="form-control cant item_cantidad" value="2" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 1);">
                                             </div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control total" value="S/. 150.00" readonly="readonly">
+                                                <input type="text" class="form-control total item_total" data-total="40" value="S/. 40" readonly="readonly">
                                             </div>
                                         </div>
-                                        <div class="item">
+                                        <div class="item" id="item-2">
                                             <div class="col-md-8 text-left">Parámetros Hídricos: CC, PM, Densidad aparente, Textura</div>
                                             <div class="col-md-1 text-center">N° 162</div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control unit" value="S/.20.00" readonly="readonly">
+                                                <input type="text" class="form-control unit item_precio" data-precio="20" value="S/.20" readonly="readonly">
                                             </div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control cant" value="S/. 30.00">
+                                                <input type="text" class="form-control cant item_cantidad" value="3" onkeypress="return justNumbers(event);" onchange="itemTotal(event, 2);">
                                             </div>
                                             <div class="col-md-1 text-center">
-                                                <input type="text" class="form-control total" value="S/. 150.00" readonly="readonly">
+                                                <input type="text" class="form-control total item_total" data-total="60" value="S/. 60" readonly="readonly">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="foot">
-                                        <div class="item">
+                                        <div class="item subtotal">
                                             <div class="col-md-8"></div>
                                             <div class="col-md-2">Sub total</div>
-                                            <div class="col-md-2">S/. 100.00</div>
+                                            <div class="col-md-2">S/. <span id="sub_total">100</span></div>
                                         </div>
-                                        <div class="item">
+                                        <div class="item igv">
                                             <div class="col-md-8"></div>
                                             <div class="col-md-2">I.G.V</div>
-                                            <div class="col-md-2">S/. 54.00</div>
+                                            <div class="col-md-2">S/. <span id="igv_subtotal">18</span></div>
                                         </div>
                                     </div>
                                     <div class="total">
                                         <div class="col-md-8"></div>
                                         <div class="col-md-2">total</div>
-                                        <div class="col-md-2">S/. 154.00</div>
+                                        <div class="col-md-2">S/. <span id="total">118</span></div>
                                     </div>
                                 </div>
                             </div>
