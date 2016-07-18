@@ -2170,6 +2170,10 @@ button.navbar-toggle {
     display: none; } }
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
+  .movil {
+    padding-left: 0;
+    margin-bottom: 30px; }
+
   .table-responsive {
     overflow: initial;
     overflow-x: scroll; }
