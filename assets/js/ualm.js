@@ -9,10 +9,13 @@ $('#Modal').on('show.bs.modal', function (event) {
   modal.find('.modal-body p span').text('Acabas de Agregar un servicio '+recipient)
 });
 
+// MODAL GRACIAS
 $('#gracias').on('show.bs.modal', function (event) {});
 
+// SELECT
 $('.dropdown-menu').find('form').click(function(e){ e.stopPropagation(); });
 
+// ACCORDION
 $('#accordion a[role="button"]').bind('click', function(e){
     var id = $(this).attr('href');
     $('#accordion .panel .content-tab').css('display','none');
@@ -22,6 +25,7 @@ $('#accordion a[role="button"]').bind('click', function(e){
     e.preventDefault();
 });
 
+// VALIDAR SOLO NUMEROS
 function justNumbers(e){
    var keynum = window.event ? window.event.keyCode : e.which;
     if ((keynum == 8) || (keynum == 46))
@@ -29,6 +33,7 @@ function justNumbers(e){
     return /\d/.test(String.fromCharCode(keynum));
 }
 
+// SUMA DE SERVICIO SUBTOTAL Y TOTAL
 function itemTotal(e ,inp){
     // calculando el total x item
     var cantidad = $('#item-'+inp).find('.item_cantidad').val(),
@@ -48,6 +53,7 @@ function itemTotal(e ,inp){
     $('#total').text(suma+igv_st);
 }
 
+// FUNCION PARA AGRAGER NUEVO SERVICIO
 function plusItemFrm(){
     var c ='<div class="item-frm">';
         c +=    '<div class="col-xs-12 col-sm-12 col-md-8">';
@@ -99,12 +105,64 @@ function plusItemFrm(){
     return c;
 }
 
+// SUMA DE COSTO + CANTIDAD
+function servicioItem(id){
+    var pu  = $('#servicio-'+id).find('input[name="input_unit"]').val(),
+        c   = $('#servicio-'+id).find('select option:selected').val();
+    $('#servicio-'+id).find('input[name="input_total"]').attr('value', pu*c);
+}
+
+// AGREGAR NUEVO SERVICIO
 $('.plus-item-frm').bind('click', function(){
     var c = plusItemFrm();
     $('#content-item-frm').append(c);
 });
 
+// FORMULARIO COTIZAR
 $('.other-cotizar .btn').bind('click', function(){
     $('.other-cotizar').remove();
     $('.other-datos').css('display','block');
 });
+
+//  FUNCION DE VALIDACION
+function validar(type){
+    // email
+    if(type == 'email'){
+        var key = document.getElementsByName("email")[0].value;
+        var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(key);
+        if(!re) {
+            //console.log('error');
+            return false;
+        } else {
+            //console.log('ok');
+            return true;
+        }
+    }
+    // letras
+    if(type == 'letras'){
+        var regex = new RegExp("^[a-zA-Z ]+$");
+        if (event.charCode!=0) {
+            var key = String.fromCharCode(!event.charCode ? event.which : event.charCode);
+            if (!regex.test(key)) {
+                event.preventDefault();
+                //console.log('error: '+ type);
+                return false;
+            }else{
+                //console.log('ok');
+                return true;
+            }
+        }
+    }
+    // textarea
+    if(type == 'textarea'){
+        var key = document.getElementsByTagName("textarea")[0].value;
+        var re = key.length;
+        if(re >= 0 && re <= 2){
+            //console.log('error');
+            return false;
+        }else{
+            //console.log('ok');
+            return true;
+        }
+    }
+}

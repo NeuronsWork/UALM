@@ -15,6 +15,7 @@
         <link href="assets/masterslider/style/masterslider.css" rel="stylesheet"  />
         <!-- Master Slider Skin -->
         <link href="assets/masterslider/skins/default/style.css" rel="stylesheet" />
+        <link href="assets/css/validetta.css" rel="stylesheet" />
 
         <script type='text/javascript' src="assets/js/modernizr.min.js"></script>
         <script type='text/javascript' src="assets/js/css3-mediaqueries.js"></script>
@@ -216,20 +217,24 @@
 
                                     <div class="col-md-12 col-sm-12 col-xs-12 others other-datos">
                                         <h2>tus datos son importantes</h2>
-                                        <form method="post" action="" class="sinborde">
+                                        <form method="post" action="" class="sinborde" id="form">
                                             <div class="col-md-10">
                                                 <div class="inputs">
                                                     <div class="col-md-3">
-                                                        Nombre<input type="text" name="nombre" class="form-control" required>
+                                                        Nombre
+                                                        <input type="text" name="nombre" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Apellido<input type="text" name="apellido" class="form-control" required>
+                                                        Apellido
+                                                        <input type="text" name="apellido" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Teléfono<input type="text" name="tlf" class="form-control" required>
+                                                        Teléfono
+                                                        <input type="text" name="tlf" class="form-control" required>
                                                     </div>
                                                     <div class="col-md-3">
-                                                        Correo electronico<input type="email" name="email" class="form-control" required>
+                                                        Correo electronico
+                                                        <input type="email" name="email" class="form-control email" onkeypress="validar('email');" required>
                                                     </div>
                                                 </div>
                                             </div>
@@ -304,7 +309,7 @@
                     <div class="modal-body">
                         <h4 class="text-center">GRACIAS!</h4>
                         <p class="text-center">Tu cotización nos ha llegado correctamente,<br>en unos momentos nos comunicaremos contigo.</p>
-                        <p class="text-center"><a href="#"><img src="assets/img/download.svg" class="img-responsive">Descargar TU cotización en pdf</a></p>
+                        <p class="text-center"><a><img src="assets/img/download.svg" class="img-responsive">Descargar TU cotización en pdf</a></p>
                         <div class="col-md-12 text-center"><button class="btn" data-dismiss="modal" aria-label="Close">VOLVER</button></div>
                     </div>
                 </div>
@@ -317,14 +322,27 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/ualm.min.js"></script>
+        <script src="assets/js/jquery.maskedinput.min.js"></script>
 
         <script>
+
             $(document).ready(function(){
-                $('form').submit(function(event){
-                    $('#gracias').modal();
+
+                $("input[name='tlf']").mask("(999) 999-9999");
+
+                $("#form").submit(function(event){
+                    var key = $('.email').val();
+                    var re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(key);
+                    if(!re) {
+                        alert('Correo electronico erroneo');
+                    } else {
+                        $('#gracias').modal();
+                    }
                     event.preventDefault();
                 });
+
             });
+
         </script>
 
     </body>

@@ -130,23 +130,27 @@
                                         <h2>Contacto</h2>
                                         <p>Llena el formulario y nos pondremos en contacto contigo</p>
                                         <h3>FORMULARIO</h3>
-                                        <form action="" method="post">
+                                        <form action="" method="post" id="form">
                                             <div class="inputs">
                                                 <div class="col-md-3">
-                                                    Nombre<input type="text" name="nombre" class="form-control" required>
+                                                    Nombre
+                                                    <input type="text" name="nombre" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Apellido<input type="text" name="apellido" class="form-control" required>
+                                                    Apellido
+                                                    <input type="text" name="apellido" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Teléfono<input type="text" name="tlf" class="form-control" required>
+                                                    Teléfono
+                                                    <input type="text" name="tlf" class="form-control" required>
                                                 </div>
                                                 <div class="col-md-3">
-                                                    Correo electronico<input type="text" name="email" class="form-control" required>
+                                                    Correo electronico
+                                                    <input type="email" name="email" class="form-control email" onkeypress="validar('email');" required>
                                                 </div>
                                                 <div class="col-md-12">
                                                     Mensaje
-                                                    <textarea name="asunto" class="form-control" rows="4" required></textarea>
+                                                    <textarea name="asunto" class="form-control" rows="4" pattern=".{3,1000}" onkeypress="validar('textarea');" required></textarea>
                                                 </div>
                                             </div>
                                             <!-- <button type="button" class="btn send pull-left" data-toggle="modal" data-target="#gracias">ENVIAR</button> -->
@@ -218,12 +222,32 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=es"></script>
         <script src="assets/js/ualm.min.js"></script>
+        <script src="assets/js/jquery.maskedinput.min.js"></script>
 
         <script>
             $(document).ready(function(){
 
-                $('form').submit(function(event){
-                    $('#gracias').modal();
+                $("input[name='tlf']").mask("(999) 999-9999");
+
+                $("#form").submit(function(event){
+                    var key = $('.email').val(),
+                        re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(key),
+                        key1 = document.getElementsByTagName("textarea")[0].value,
+                        re1 = key1.length,
+                        x = 0, msg = '';
+                    if(!re) {
+                        x += 1;
+                        msg += "Ingresar un correo electronico valido.\n";
+                    }
+                    if(re1 >= 0 && re1 <= 2){
+                        x += 1;
+                        msg += "Minimo de caracteres 3";
+                    }
+                    if(x <= 0){
+                        $("#gracias").modal();
+                    }else{
+                        alert(msg);
+                    }
                     event.preventDefault();
                 });
 

@@ -41,6 +41,9 @@ body {
 .pad_left {
   padding-left: 0px !important; }
 
+a, button {
+  cursor: pointer; }
+
 form {
   position: relative;
   float: left;
@@ -1701,6 +1704,7 @@ section {
       position: relative;
       text-align: center; }
     #backend .tab-content .center a, #backend .tab-content .center span {
+      cursor: pointer;
       width: 100%;
       text-align: center;
       position: relative;
