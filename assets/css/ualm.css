@@ -44,6 +44,15 @@ body {
 a, button {
   cursor: pointer; }
 
+em.error {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: -12px;
+  font-size: 10px;
+  line-height: 10px;
+  color: red; }
+
 form {
   position: relative;
   float: left;
@@ -1149,15 +1158,20 @@ aside.sidebar_qs {
           padding: 0;
           font-size: 1em;
           opacity: 0; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label, .section article .carrito footer .contacto form input[type=radio]:not(old) + label {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label,
+        .section article .carrito footer .others form input[type=radio]:not(old) + em + label, .section article .carrito footer .contacto form input[type=radio]:not(old) + label,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + em + label {
           display: inline-block;
           margin-left: -2em;
           line-height: 13px;
           color: #666;
+          cursor: pointer;
           font-family: "Open Sans", sans-serif;
           font-size: 13px;
           font-weight: 500; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span,
+        .section article .carrito footer .others form input[type=radio]:not(old) + em + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + em + label > span {
           display: inline-block;
           width: 13px;
           height: 13px;
@@ -1169,11 +1183,17 @@ aside.sidebar_qs {
           -moz-border-radius: 50px;
           -ms-border-radius: 50px;
           border-radius: 50px; }
-        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span {
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span,
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + em + label > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old):checked + em + label > span {
           background: #fff; }
         .section article .carrito footer .others form input[type=radio]:not(old):checked + label > span > span,
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span > span,
-        .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span {
+        .section article .carrito footer .others form input[type=radio]:not(old):checked + em + label > span > span,
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span,
+        .section article .carrito footer .others form input[type=radio]:not(old) + em + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old):checked + label > span > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old):checked + em + label > span > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + em + label > span > span {
           display: block;
           width: 7px;
           height: 7px;
@@ -1184,7 +1204,9 @@ aside.sidebar_qs {
           -moz-border-radius: 50px;
           -ms-border-radius: 50px;
           border-radius: 50px; }
-        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span {
+        .section article .carrito footer .others form input[type=radio]:not(old) + label > span > span,
+        .section article .carrito footer .others form input[type=radio]:not(old) + em + label > span > span, .section article .carrito footer .contacto form input[type=radio]:not(old) + label > span > span,
+        .section article .carrito footer .contacto form input[type=radio]:not(old) + em + label > span > span {
           background: #ccc; }
       .section article .carrito footer .others form.sinborde, .section article .carrito footer .contacto form.sinborde {
         border-bottom: 0px; }
@@ -2102,7 +2124,8 @@ button.navbar-toggle {
   top: 103%; }
 
 .tbEst .dataTables_wrapper .dataTables_paginate {
-  top: 120% !important; }
+  top: 120% !important;
+  right: initial !important; }
 
 /*==========  Non-Mobile First Method  ==========*/
 /* Large Devices, Wide Screens */

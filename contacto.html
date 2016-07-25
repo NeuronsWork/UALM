@@ -30,12 +30,18 @@
 
         <!-- HEADER -->
         <header class="container-fluid">
-            <div class="col-xs-3 col-md-3 col-md-3 brand">
-                <a href="#"><img src="assets/img/logo.jpg" class="img-responsive img-center"></a>
+            <div class="col-xs-12 col-sm-3 col-md-3 brand">
+                <a href="#"><img src="assets/img/logo.jpg" class="img-responsive img-center brand-logo"></a>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <div class="col-xs-9 col-sm-9 col-md-9">
+            <div class="col-xs-12 col-sm-9 col-md-9">
                 <div class="row sub-header">
-                    <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
                         <form action="index_submit" method="get" accept-charset="utf-8" class="form-horizontal" role="search">
                             <div class="input-group">
                                 <input type="text" class="form-control" placeholder="Que estas buscando?" name="q">
@@ -45,15 +51,15 @@
                             </div>
                         </form>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 menu-info">
+                    <div class="hidden-xs col-xs-12 col-sm-6 col-md-6 menu-info">
                         <ul class="list-unstyled nav-justified">
                             <li><img src="assets/img/faq.svg" class="pull-left"><a href="ayuda.html">Necesitas ayuda?</a></li>
                             <li><img src="assets/img/info.svg" class="pull-left"><a href="carrito.html">Información de la Cotización</a></li>
-                            <li><img src="assets/img/cursor.svg" class="pull-left"><a href="index.html">Visita nuestra la Web</a></li>
+                            <li><img src="assets/img/cursor.svg" class="pull-left"><a href="index.html">Visita nuestra Web</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="row menu">
+                <div id="navbar" class="row menu navbar-collapse collapse">
                     <div class="col-xs-12 col-sm-10 col-md-10">
                         <ul class="list-unstyled nav nav-justified">
                             <li>
@@ -134,23 +140,23 @@
                                             <div class="inputs">
                                                 <div class="col-md-3">
                                                     Nombre
-                                                    <input type="text" name="nombre" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
+                                                    <input type="text" name="nombre" id="nombre" class="form-control nombre" required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     Apellido
-                                                    <input type="text" name="apellido" class="form-control" onkeypress="validar('letras');" pattern=".{3,30}" required>
+                                                    <input type="text" name="apellido" id="apellido" class="form-control apellido" required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     Teléfono
-                                                    <input type="text" name="tlf" class="form-control" required>
+                                                    <input type="text" name="tlf" id="tlf" class="form-control tlf" required>
                                                 </div>
                                                 <div class="col-md-3">
                                                     Correo electronico
-                                                    <input type="email" name="email" class="form-control email" onkeypress="validar('email');" required>
+                                                    <input type="text" name="email" id="email" class="form-control email" required>
                                                 </div>
                                                 <div class="col-md-12">
                                                     Mensaje
-                                                    <textarea name="asunto" class="form-control" rows="4" pattern=".{3,1000}" onkeypress="validar('textarea');" required></textarea>
+                                                    <textarea name="asunto" id="asunto" class="form-control asunto" rows="4" required></textarea>
                                                 </div>
                                             </div>
                                             <!-- <button type="button" class="btn send pull-left" data-toggle="modal" data-target="#gracias">ENVIAR</button> -->
@@ -222,34 +228,53 @@
         <script src="assets/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=es"></script>
         <script src="assets/js/ualm.min.js"></script>
-        <script src="assets/js/jquery.maskedinput.min.js"></script>
+
+        <script src="assets/js/jquery.validate.js"></script>
+        <script src="assets/js/additional-methods.js"></script>
+        <script src="assets/js/messages_es_PE.min.js"></script>
 
         <script>
+
+            $.validator.methods.email = function( value, element ) {
+                return this.optional( element ) || /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(value);
+            }
+
+            jQuery.validator.addMethod("lettersonly", function(value, element) {
+                return this.optional(element) || /^[a-z ]+$/i.test(value);
+            }, "Ingresar solo letras");
+
+            $("#form").validate({
+                rules: {
+                    nombre: {
+                        required: true,
+                        lettersonly: true,
+                        minlength: 2
+                    },
+                    apellido: {
+                        required: true,
+                        lettersonly: true,
+                        minlength: 2
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    tlf: {
+                        required: true,
+                        digits: true,
+                        minlength: 7
+                    },
+                    asunto: {
+                        required: true,
+                        minlength: 2
+                    }
+                },
+                errorElement: "em",
+                success: "valid",
+                submitHandler: function() { $('#gracias').modal(); }
+            });
+
             $(document).ready(function(){
-
-                $("input[name='tlf']").mask("(999) 999-9999");
-
-                $("#form").submit(function(event){
-                    var key = $('.email').val(),
-                        re = /([A-Z0-9a-z_-][^@])+?@[^$#<>?]+?\.[\w]{2,4}/.test(key),
-                        key1 = document.getElementsByTagName("textarea")[0].value,
-                        re1 = key1.length,
-                        x = 0, msg = '';
-                    if(!re) {
-                        x += 1;
-                        msg += "Ingresar un correo electronico valido.\n";
-                    }
-                    if(re1 >= 0 && re1 <= 2){
-                        x += 1;
-                        msg += "Minimo de caracteres 3";
-                    }
-                    if(x <= 0){
-                        $("#gracias").modal();
-                    }else{
-                        alert(msg);
-                    }
-                    event.preventDefault();
-                });
 
                 //Google Maps JS
                 //Set Map
